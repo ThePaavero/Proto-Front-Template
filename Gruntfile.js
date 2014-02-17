@@ -37,18 +37,18 @@ module.exports = function(grunt) {
 		cssmin: {
 			combine: {
 				files: {
-					'assets/css/project.min.css': ['assets/css/*.css']
+					'assets/css/project.min.css': ['assets/css/project.css']
 				}
 			}
 		},
 		watch: {
 			scss: {
 				files: 'assets/src/scss/**/*.scss',
-				tasks: ['sass',]
+				tasks: ['sass']
 			},
 			css: {
-				files: 'assets/css/**/*.css',
-				tasks: ['cssmin',]
+				files: 'assets/css/assets/css/project.css',
+				tasks: ['cssmin']
 			},
 			ts: {
 				files: ['assets/src/ts/**/*.ts'],
