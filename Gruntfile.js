@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 		watch: {
 			scss: {
 				files: 'assets/src/scss/**/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'beep:3']
 			},
 			css: {
 				files: 'assets/css/assets/css/project.css',
@@ -68,6 +68,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-jsmin-sourcemap');
 	grunt.loadNpmTasks('grunt-typescript');
+	grunt.loadNpmTasks('grunt-beep');
 
 	grunt.registerTask('default', ['jsmin-sourcemap', 'sass', 'cssmin']);
 	grunt.registerTask('dev', ['watch']);
