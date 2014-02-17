@@ -1,1 +1,4 @@
-console.log('Typescript here.');
+$(function()
+{
+	console.log('Typescript here.');
+});
