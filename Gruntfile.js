@@ -12,7 +12,20 @@ module.exports = function(grunt) {
 				src: ['assets/src/js/main.js', 'assets/src/js/**/*.js'],
 				dest: 'assets/js/project.min.js',
 				destMap: 'assets/js/project.map.js'
-			},
+			}
+		},
+		typescript: {
+			base: {
+				src: ['assets/src/ts/**/*.ts'],
+				dest: 'assets/src/js/compiled_typescript.js',
+				options: {
+					module: 'amd', //or commonjs
+					target: 'es5', //or es3
+					base_path: 'assets/src/ts',
+					sourcemap: true,
+					declaration: true
+				}
+			}
 		},
 		sass: {
 			dist: {
@@ -37,6 +50,10 @@ module.exports = function(grunt) {
 				files: 'assets/css/**/*.css',
 				tasks: ['cssmin',]
 			},
+			ts: {
+				files: ['assets/src/ts/**/*.ts'],
+				tasks : ['typescript']
+			},
 			js: {
 				files: ['assets/src/js/**/*.js'],
 				tasks : ['jsmin-sourcemap']
@@ -50,6 +67,7 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	grunt.loadNpmTasks('grunt-jsmin-sourcemap');
+	grunt.loadNpmTasks('grunt-typescript');
 
 	grunt.registerTask('default', ['jsmin-sourcemap', 'sass', 'cssmin']);
 	grunt.registerTask('dev', ['watch']);

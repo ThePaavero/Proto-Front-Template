@@ -17,6 +17,7 @@
     "grunt-contrib-cssmin": "~0.6.1",
     "grunt-contrib-jshint": "~0.6.1",
     "grunt-phpunit": "~0.3.1",
-    "load-grunt-tasks": "~0.2.0"
+    "load-grunt-tasks": "~0.2.0",
+    "grunt-typescript": "~0.2.7"
   }
 }
