@@ -1,3 +1,9 @@
+/**
+ * Namespaces and default initializer
+ *
+ * @package Project
+ */
+
 window.Project = {};
 
 Project.App     = {};

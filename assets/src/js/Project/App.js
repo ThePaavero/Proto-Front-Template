@@ -1,3 +1,8 @@
+/**
+ * Main application object
+ *
+ * @package Project
+ */
 Project.App = function() {
 
 	this.init = function()
