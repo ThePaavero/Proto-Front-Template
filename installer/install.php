@@ -6,15 +6,6 @@ $cli = new QuickCLI\QuickCLI('Front Template Installer');
 
 $cli->line('Welcome to ' . $cli->getAppName(), 2, 'light_cyan');
 
-$options = array(
-		'flag_a' => $cli->getFlag('a')
-	);
-
-if($options['flag_a'] === true)
-{
-	$cli->line('-a was used', 1, 'gray');
-}
-
 $project_name = $cli->prompt('Enter name of project (computer format, lowercase)', true);
 $default_project_name = 'project';
 
