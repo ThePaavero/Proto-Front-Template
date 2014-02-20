@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Quick "installer" script
+ *
+ * All it does is rename stuff (directories, filenames and strings within files)
+ */
+
 require 'quickcli.php';
 
 $cli = new QuickCLI\QuickCLI('Front Template Installer');
